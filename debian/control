@@ -1,0 +1,26 @@
+Source: sessc-mpi
+Priority: extra
+Maintainer: Nicholas Ng <nickng@doc.ic.ac.uk>
+Build-Depends: debhelper (>= 8.0.0), libsesstype-dev (>= 1.0.0), libscribble-dev (>= 1.0.0)
+Standards-Version: 3.9.3
+Section: libs
+Homepage: http://www.doc.ic.ac.uk/~cn06/sessionc
+Vcs-Git: git://github.com/sessionc/sessc-common.git
+
+Package: sessc-mpi-dev
+Section: libdevel
+Architecture: amd64
+Depends: sessc-mpi (= ${binary:Version}), sessc-common (>= 1.0.0), libsesstype-dev (>= 1.0.0), libscribble-dev (>= 1.0.0)
+Description: Runtime library for session types programming (dev)
+ Development files for programming with Session Types in C (MPI-based runtime).
+ This is the MPI-based runtime library for Session C programming, part of the Session C programming framework.
+ See http://www.doc.ic.ac.uk/~cn06/sessionc for details.
+
+Package: sessc-mpi
+Section: libs
+Architecture: amd64
+Depends: sessc-common (>= 1.0.0), libsesstype (>= 1.0.0), libscribble (>= 1.0.0), ${shlibs:Depends}, ${misc:Depends}
+Description: Runtime library for session types programming (dev)
+ Runtime library for programming with Session Types in C (MPI-based runtime).
+ This is the MPI-based runtime library for Session C programming, part of the Session C programming framework.
+ See http://www.doc.ic.ac.uk/~cn06/sessionc for details.
